@@ -158,7 +158,7 @@ while loop:
     elif what == "9":
         os.system("git clone https://github.com/Miserlou/Hash-Identifier.git")
         print("====================================")
-        print("[+] Nikto Downloaded successfully :)")
+        print("[+] Hash-Identifier Downloaded successfully :)")
         print("[+] Go to Hash-Identifier folder to start.")
         print("====================================")
         rmenu = input("[?] Back to Menu? (y/n): ")
