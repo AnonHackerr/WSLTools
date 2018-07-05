@@ -3,6 +3,7 @@ import os
 def menu():
 
     print(""" 
+========================================
 __          _______ _   _______          _     
 \ \        / / ____| | |__   __|        | |    
  \ \  /\  / / (___ | |    | | ___   ___ | |___ 
@@ -21,6 +22,11 @@ Ver: 1.0
 2. Install Social-Engineer Toolkit (SET)
 3. Install Nmap
 4. Install SqlMap
+5. Install Websploit
+6. Install Hydra
+7. Install WPScan
+8. Install Nikto
+9. Install Hash-Identifier
 ------------------------------------------
 99. Exit
 ========================================
@@ -33,7 +39,7 @@ while loop:
     what = input("#: ")
     if what == "00":
         print("================================")
-        print("This will install: Metasploit, SET, Nmap, SQLMap.")
+        print("This will install: Metasploit, SET, Nmap, SQLMap, Websploit, Hydra, Hash-Identifie")
         print("----------------")
         hm = input("[?] Do you want to continue? (y/n): ")
         print("================================")
@@ -49,6 +55,9 @@ while loop:
             os.system("python3 setup.py install")
             os.system("sudo apt-get install nmap")
             os.system("sudo apt-get install sqlmap")
+            os.system("sudo apt-get install websploit")
+            os.system("sudo apt-get install hydra")
+            os.system("git clone https://github.com/Miserlou/Hash-Identifier.git")
         else:
             rmenu = input("[?] Back to Menu? (y/n): ")
             if rmenu == "y":
@@ -96,6 +105,61 @@ while loop:
         print("====================================")
         print("[+] SQLMap installed successfully :)")
         print("[+] Type 'SQLMap' to start.")
+        print("====================================")
+        rmenu = input("[?] Back to Menu? (y/n): ")
+        if rmenu == "y":
+            menu()
+        else:
+            break
+    elif what == "5":
+        os.system("sudo apt-get install websploit")
+        print("====================================")
+        print("[+] Websploit installed successfully :)")
+        print("[+] Type 'websploit' to start.")
+        print("====================================")
+        rmenu = input("[?] Back to Menu? (y/n): ")
+        if rmenu == "y":
+            menu()
+        else:
+            break
+    elif what == "6":
+        os.system("sudo apt-get install hydra")
+        print("====================================")
+        print("[+] Htdra installed successfully :)")
+        print("[+] Type 'hydra' to start.")
+        print("====================================")
+        rmenu = input("[?] Back to Menu? (y/n): ")
+        if rmenu == "y":
+            menu()
+        else:
+            break
+    elif what == "7":
+        os.system("sudo apt-get install wpscan")
+        print("====================================")
+        print("[+] wpscan installed successfully :)")
+        print("[+] Type 'wpscan' to start.")
+        print("====================================")
+        rmenu = input("[?] Back to Menu? (y/n): ")
+        if rmenu == "y":
+            menu()
+        else:
+            break
+    elif what == "8":
+        os.system("sudo apt-get install nikto")
+        print("====================================")
+        print("[+] Nikto installed successfully :)")
+        print("[+] Type 'nikto' to start.")
+        print("====================================")
+        rmenu = input("[?] Back to Menu? (y/n): ")
+        if rmenu == "y":
+            menu()
+        else:
+            break
+    elif what == "9":
+        os.system("git clone https://github.com/Miserlou/Hash-Identifier.git")
+        print("====================================")
+        print("[+] Nikto Downloaded successfully :)")
+        print("[+] Go to Hash-Identifier folder to start.")
         print("====================================")
         rmenu = input("[?] Back to Menu? (y/n): ")
         if rmenu == "y":
